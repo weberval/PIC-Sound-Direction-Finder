@@ -1,22 +1,31 @@
+#define _XTAL_FREQ 4000000
+#define USE_OR_MASKS
+
+//#include <xc.h>
+#include "xlcd.h"
+//#include <stdio.h>
+//#include <stdlib.h>
+
+// Prototypes
+void init_XLCD(void); //Initialize LCD display
+void DelayFor18TCY( void ); //18 cycles delay
+void DelayPORXLCD (void); // Delay of 15ms
+void DelayXLCD (void); // Delay of 5ms
+
+// BEGIN CONFIG
 // PIC18F4520 Configuration Bit Settings
-
-// 'C' source line config statements
-
-// #pragma config statements should precede project file includes.
-// Use project enums instead of #define for ON and OFF.
-
 // CONFIG1H
 #pragma config OSC = XT         // Oscillator Selection bits (XT oscillator)
 #pragma config FCMEN = OFF      // Fail-Safe Clock Monitor Enable bit (Fail-Safe Clock Monitor disabled)
 #pragma config IESO = OFF       // Internal/External Oscillator Switchover bit (Oscillator Switchover mode disabled)
 
 // CONFIG2L
-#pragma config PWRT = OFF       // Power-up Timer Enable bit (PWRT disabled)
+#pragma config PWRT = ON        // Power-up Timer Enable bit (PWRT enabled)
 #pragma config BOREN = OFF      // Brown-out Reset Enable bits (Brown-out Reset disabled in hardware and software)
 #pragma config BORV = 3         // Brown Out Reset Voltage bits (Minimum setting)
 
 // CONFIG2H
-#pragma config WDT = OFF        // Watchdog Timer Enable bit (WDT disabled (control is placed on the SWDTEN bit))
+#pragma config WDT = OFF         // Watchdog Timer Enable bit (WDT enabled)
 #pragma config WDTPS = 32768    // Watchdog Timer Postscale Select bits (1:32768)
 
 // CONFIG3H
@@ -27,7 +36,7 @@
 
 // CONFIG4L
 #pragma config STVREN = ON      // Stack Full/Underflow Reset Enable bit (Stack full/underflow will cause Reset)
-#pragma config LVP = OFF         // Single-Supply ICSP Enable bit (Single-Supply ICSP disabled)
+#pragma config LVP = ON         // Single-Supply ICSP Enable bit (Single-Supply ICSP enabled)
 #pragma config XINST = OFF      // Extended Instruction Set Enable bit (Instruction set extension and Indexed Addressing mode disabled (Legacy mode))
 
 // CONFIG5L
@@ -59,11 +68,3 @@
 
 // CONFIG7H
 #pragma config EBTRB = OFF      // Boot Block Table Read Protection bit (Boot block (000000-0007FFh) not protected from table reads executed in other blocks)
-
-
-// Defines --------------------------------------------------------------------
-#define _XTAL_FREQ 4000000  // Fosc 4MHz XTAL frequency 
-                            // used ONLY for _delay() functions
-
-// Includes -------------------------------------------------------------------
-#include <xc.h>

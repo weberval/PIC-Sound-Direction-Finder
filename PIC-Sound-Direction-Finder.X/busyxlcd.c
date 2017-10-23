@@ -1,5 +1,5 @@
 #include <p18cxxx.h>
-#include <xlcd.h>
+#include "xlcd.h"
 
 /********************************************************************
 *       Function Name:  BusyXLCD                                    *
@@ -55,4 +55,5 @@ unsigned char BusyXLCD(void)
         }
 #endif
 }
+
 
