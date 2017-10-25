@@ -1,5 +1,7 @@
 #include "Definitions.h"
 #include "xlcd.h"
+#include "adc.h"
+#include <stdio.h>
 
 void main(void) 
 {
@@ -7,16 +9,40 @@ LATA = 0xFF;
 LATB = 0xFF;
 init_XLCD();                    // Call the Initialize LCD display function
 
+int tmp;
+int testbuffer;
+unsigned char config1=0x00,config2=0x00,config3=0x00,portconfig=0x00,i=0;
+TRISAbits.RA0 = 1;
+config1 = ADC_FOSC_4 | ADC_RIGHT_JUST | ADC_4_TAD ;
+config2 = ADC_CH0 | ADC_INT_OFF | ADC_REF_VDD_VSS ;
+portconfig = ADC_1ANA ;
+OpenADC( config1,config2,portconfig);
 
 Nop();
 
-//while(1) {
-    putrsXLCD("Das ist Zeile 1");
-    SetDDRamAddr(0x40);
+while(1) {
     
-    putrsXLCD("Das ist Zeile 2");
-   __delay_ms(100);
-//}    
+    ConvertADC();
+    while(BusyADC());
+    tmp = ReadADC();
+    char buffer[10];
+ 
+    if(testbuffer != tmp) {
+        
+        sprintf(buffer, "%d", tmp);  
+        while(BusyXLCD());
+        init_XLCD();
+        while(BusyXLCD());
+        putrsXLCD(buffer);
+        while(BusyXLCD());
+    }
+    
+   
+    testbuffer = tmp;
+    __delay_ms(100);
+}  
+CloseADC();
+
 return;
 }
 
