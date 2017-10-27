@@ -5,6 +5,7 @@
         <group>
             <file>file:/D:/Systemnahe%20Programmierung/PIC-Sound-Direction-Finder/PIC-Sound-Direction-Finder.X/adc.h</file>
             <file>file:/D:/Systemnahe%20Programmierung/PIC-Sound-Direction-Finder/PIC-Sound-Direction-Finder.X/adcopen.c</file>
+            <file>file:/D:/Systemnahe%20Programmierung/PIC-Sound-Direction-Finder/PIC-Sound-Direction-Finder.X/openxlcd.c</file>
             <file>file:/D:/Systemnahe%20Programmierung/PIC-Sound-Direction-Finder/PIC-Sound-Direction-Finder.X/adcread.c</file>
             <file>file:/D:/Systemnahe%20Programmierung/PIC-Sound-Direction-Finder/PIC-Sound-Direction-Finder.X/adcbusy.c</file>
             <file>file:/D:/Systemnahe%20Programmierung/PIC-Sound-Direction-Finder/PIC-Sound-Direction-Finder.X/main.c</file>
