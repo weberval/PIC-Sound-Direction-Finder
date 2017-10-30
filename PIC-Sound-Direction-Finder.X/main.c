@@ -7,30 +7,102 @@ void main(void)
 {
 LATA = 0xFF;
 LATB = 0xFF;
-TRISD = 0xFF;
+TRISD = 0;
+TRISDbits.RD0 = 1;
+TRISDbits.RD1 = 1;
+TRISDbits.RD2 = 1;
+int recorded = 0;
 
-TRISBbits.RB4 = 1;
-TRISBbits.RB5 = 1;
 init_XLCD();
-int testbuffer = -1;
-Nop();
-
+int startcount = 0;
+char order[3];
+int rd0end = 1;
+int rd1end = 1;
+int rd2end = 1;
+unsigned long count = 0;
 while(1) {
-    int tempvariable = PORTBbits.RB5;
-    if(testbuffer != tempvariable) {
-        char buffer[10];
-        sprintf(buffer, "%d", tempvariable);
-        while(BusyXLCD());
-        init_XLCD();
-        while(BusyXLCD());
-        putrsXLCD(buffer);
-        while(BusyXLCD());
-        if(tempvariable == 1) {
-            __delay_ms(1000);
-        }
+    ++count;
+    if(count == 100000) {
         
+        init_XLCD();
+        order[0] = NULL;
+        order[1] = NULL;
+        order[2] = NULL;
+        rd0end = 1;
+        rd1end = 1;
+        rd2end = 1;
+        count = 0;
     }
-    testbuffer = tempvariable;
+    
+    
+    if(PORTDbits.RD0 == 1 && rd0end == 1) {
+        rd0end = 0;
+        if(order[0] == NULL) {
+            order[0] = 'M';
+        }
+        else if(order[1] == NULL) {
+            order[1] = 'M';
+        }
+        else {
+            order[2] = 'M';
+            init_XLCD();
+            putrsXLCD(order);
+            order[0] = NULL;
+            order[1] = NULL;
+            order[2] = NULL;
+            rd0end = 1;
+            rd1end = 1;
+            rd2end = 1;
+            __delay_ms(2000);
+            
+        }    
+    }
+    
+    if(PORTDbits.RD1 == 1 && rd1end == 1) {
+        rd1end = 0;
+        if(order[0] == NULL) {
+            order[0] = 'L';
+        }
+        else if(order[1] == NULL) {
+            order[1] = 'L';
+        }
+        else {
+            order[2] = 'L';
+            init_XLCD();
+            putrsXLCD(order);
+            order[0] = NULL;
+            order[1] = NULL;
+            order[2] = NULL;
+            rd0end = 1;
+            rd1end = 1;
+            rd2end = 1;
+            __delay_ms(2000);
+            
+        } 
+    }
+    
+    if(PORTDbits.RD2 == 1 && rd2end == 1) {
+        rd2end = 0;
+        if(order[0] == NULL) {
+            order[0] = 'R';
+        }
+        else if(order[1] == NULL) {
+            order[1] = 'R';
+        }
+        else {
+            order[2] = 'R';
+            init_XLCD();
+            putrsXLCD(order);
+            order[0] = NULL;
+            order[1] = NULL;
+            order[2] = NULL;
+            rd0end = 1;
+            rd1end = 1;
+            rd2end = 1;
+            __delay_ms(2000);
+            
+        } 
+    }
 }  
 
 return;
