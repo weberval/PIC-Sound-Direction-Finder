@@ -4028,6 +4028,8 @@ char order[3];
 int rd0end = 1;
 int rd1end = 1;
 int rd2end = 1;
+int duration;
+unsigned long tempcounter = 0;
 unsigned long count = 0;
 while(1) {
 ++count;
@@ -4048,9 +4050,11 @@ if(PORTDbits.RD0 == 1 && rd0end == 1) {
 rd0end = 0;
 if(order[0] == (0)) {
 order[0] = 'M';
+tempcounter = count;
 }
 else if(order[1] == (0)) {
 order[1] = 'M';
+duration = count - tempcounter;
 }
 else {
 order[2] = 'M';
@@ -4062,6 +4066,7 @@ order[2] = (0);
 rd0end = 1;
 rd1end = 1;
 rd2end = 1;
+duration = 0;
 _delay((unsigned long)((2000)*(4000000/4000.0)));
 
 }
@@ -4071,9 +4076,11 @@ if(PORTDbits.RD1 == 1 && rd1end == 1) {
 rd1end = 0;
 if(order[0] == (0)) {
 order[0] = 'L';
+tempcounter = count;
 }
 else if(order[1] == (0)) {
 order[1] = 'L';
+duration = count - tempcounter;
 }
 else {
 order[2] = 'L';
@@ -4085,6 +4092,7 @@ order[2] = (0);
 rd0end = 1;
 rd1end = 1;
 rd2end = 1;
+duration = 0;
 _delay((unsigned long)((2000)*(4000000/4000.0)));
 
 }
@@ -4094,9 +4102,11 @@ if(PORTDbits.RD2 == 1 && rd2end == 1) {
 rd2end = 0;
 if(order[0] == (0)) {
 order[0] = 'R';
+tempcounter = count;
 }
 else if(order[1] == (0)) {
 order[1] = 'R';
+duration = count - tempcounter;
 }
 else {
 order[2] = 'R';
@@ -4108,6 +4118,7 @@ order[2] = (0);
 rd0end = 1;
 rd1end = 1;
 rd2end = 1;
+duration = 0;
 _delay((unsigned long)((2000)*(4000000/4000.0)));
 
 }
