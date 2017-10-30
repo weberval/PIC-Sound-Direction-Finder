@@ -6,47 +6,37 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _LATB `Vuc ~T0 @X0 0 e@3978 ]
 "2141
 [v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
-"1708
-[s S61 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S61 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
-"1718
-[s S62 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S62 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"1707
-[u S60 `S61 1 `S62 1 ]
-[n S60 . . . ]
-"1729
-[v _TRISBbits `VS60 ~T0 @X0 0 e@3987 ]
+"2152
+[s S73 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S73 . TRISD0 TRISD1 TRISD2 TRISD3 TRISD4 TRISD5 TRISD6 TRISD7 ]
+"2162
+[s S74 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S74 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"2151
+[u S72 `S73 1 `S74 1 ]
+[n S72 . . . ]
+"2173
+[v _TRISDbits `VS72 ~T0 @X0 0 e@3989 ]
 "10 Definitions.h
 [v _init_XLCD `(v ~T0 @X0 0 ef ]
-"43 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic18.h
-[v ___nop `(v ~T0 @X0 0 ef ]
-[p i ___nop ]
-"275 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic18f4520.h
-[s S12 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S12 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"285
-[s S13 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S13 . INT0 INT1 INT2 CCP2 KBI0 KBI1 KBI2 KBI3 ]
-"295
-[s S14 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S14 . AN12 AN10 AN8 AN9 AN11 PGM PGC PGD ]
-"305
-[s S15 :1 `uc 1 ]
-[n S15 . FLT0 ]
-"308
-[s S16 :3 `uc 1 :1 `uc 1 ]
-[n S16 . . CCP2_PA2 ]
-"274
-[u S11 `S12 1 `S13 1 `S14 1 `S15 1 `S16 1 ]
-[n S11 . . . . . . ]
-"313
-[v _PORTBbits `VS11 ~T0 @X0 0 e@3969 ]
-"194 C:\Program Files (x86)\Microchip\xc8\v1.44\include\stdio.h
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"102 xlcd.h
-[v _BusyXLCD `(uc ~T0 @X0 0 ef ]
-"137
+"636 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic18f4520.h
+[s S24 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S24 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"646
+[s S25 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S25 . PSP0 PSP1 PSP2 PSP3 PSP4 PSP5 PSP6 PSP7 ]
+"656
+[s S26 :5 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S26 . . P1B P1C P1D ]
+"662
+[s S27 :7 `uc 1 :1 `uc 1 ]
+[n S27 . . SS2 ]
+"635
+[u S23 `S24 1 `S25 1 `S26 1 `S27 1 ]
+[n S23 . . . . . ]
+"667
+[v _PORTDbits `VS23 ~T0 @X0 0 e@3971 ]
+"137 xlcd.h
 [v _putrsXLCD `(v ~T0 @X0 0 ef1`*Cuc ]
 [v F2995 `(v ~T0 @X0 1 tf1`ul ]
 "164 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic18.h
@@ -54,6 +44,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p i __delay ]
 "87 xlcd.h
 [v _OpenXLCD `(v ~T0 @X0 0 ef1`uc ]
+"102
+[v _BusyXLCD `(uc ~T0 @X0 0 ef ]
 "117
 [v _WriteCmdXLCD `(v ~T0 @X0 0 ef1`uc ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
@@ -2978,176 +2970,391 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 9: LATB = 0xFF;
 "9
 [e = _LATB -> -> 255 `i `uc ]
-[; ;main.c: 10: TRISD = 0xFF;
+[; ;main.c: 10: TRISD = 0;
 "10
-[e = _TRISD -> -> 255 `i `uc ]
-[; ;main.c: 12: TRISBbits.RB4 = 1;
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;main.c: 11: TRISDbits.RD0 = 1;
+"11
+[e = . . _TRISDbits 1 0 -> -> 1 `i `uc ]
+[; ;main.c: 12: TRISDbits.RD1 = 1;
 "12
-[e = . . _TRISBbits 1 4 -> -> 1 `i `uc ]
-[; ;main.c: 13: TRISBbits.RB5 = 1;
+[e = . . _TRISDbits 1 1 -> -> 1 `i `uc ]
+[; ;main.c: 13: TRISDbits.RD2 = 1;
 "13
-[e = . . _TRISBbits 1 5 -> -> 1 `i `uc ]
-[; ;main.c: 14: init_XLCD();
+[e = . . _TRISDbits 1 2 -> -> 1 `i `uc ]
 "14
-[e ( _init_XLCD ..  ]
-"15
-[v _testbuffer `i ~T0 @X0 1 a ]
-[; ;main.c: 15: int testbuffer = -1;
-[e = _testbuffer -U -> 1 `i ]
-[; ;main.c: 16: __nop();
+[v _recorded `i ~T0 @X0 1 a ]
+[; ;main.c: 14: int recorded = 0;
+[e = _recorded -> 0 `i ]
+[; ;main.c: 16: init_XLCD();
 "16
-[e ( ___nop ..  ]
-[; ;main.c: 18: while(1) {
+[e ( _init_XLCD ..  ]
+"17
+[v _startcount `i ~T0 @X0 1 a ]
+[; ;main.c: 17: int startcount = 0;
+[e = _startcount -> 0 `i ]
 "18
+[v _order `uc ~T0 @X0 -> 3 `i a ]
+"19
+[v _rd0end `i ~T0 @X0 1 a ]
+[; ;main.c: 18: char order[3];
+[; ;main.c: 19: int rd0end = 1;
+[e = _rd0end -> 1 `i ]
+"20
+[v _rd1end `i ~T0 @X0 1 a ]
+[; ;main.c: 20: int rd1end = 1;
+[e = _rd1end -> 1 `i ]
+"21
+[v _rd2end `i ~T0 @X0 1 a ]
+[; ;main.c: 21: int rd2end = 1;
+[e = _rd2end -> 1 `i ]
+"22
+[v _count `ul ~T0 @X0 1 a ]
+[; ;main.c: 22: unsigned long count = 0;
+[e = _count -> -> -> 0 `i `l `ul ]
+[; ;main.c: 23: while(1) {
+"23
 [e :U 280 ]
 {
-"19
-[v _tempvariable `i ~T0 @X0 1 a ]
-[; ;main.c: 19: int tempvariable = PORTBbits.RB5;
-[e = _tempvariable -> . . _PORTBbits 0 5 `i ]
-[; ;main.c: 20: if(testbuffer != tempvariable) {
-"20
-[e $ ! != _testbuffer _tempvariable 282  ]
-{
-"21
-[v _buffer `uc ~T0 @X0 -> 10 `i a ]
-[; ;main.c: 21: char buffer[10];
-[; ;main.c: 22: sprintf(buffer, "%d", tempvariable);
-"22
-[e ( _sprintf (1 , (. , &U _buffer :s 1C _tempvariable ]
-[; ;main.c: 23: while(BusyXLCD());
-"23
-[e $U 283  ]
-[e :U 284 ]
-[e :U 283 ]
-[e $ != -> ( _BusyXLCD ..  `i -> -> -> 0 `i `uc `i 284  ]
-[e :U 285 ]
-[; ;main.c: 24: init_XLCD();
+[; ;main.c: 24: ++count;
 "24
-[e ( _init_XLCD ..  ]
-[; ;main.c: 25: while(BusyXLCD());
+[e =+ _count -> -> -> 1 `i `l `ul ]
+[; ;main.c: 25: if(count == 100000) {
 "25
-[e $U 286  ]
-[e :U 287 ]
-[e :U 286 ]
-[e $ != -> ( _BusyXLCD ..  `i -> -> -> 0 `i `uc `i 287  ]
-[e :U 288 ]
-[; ;main.c: 26: putrsXLCD(buffer);
-"26
-[e ( _putrsXLCD (1 -> &U _buffer `*Cuc ]
-[; ;main.c: 27: while(BusyXLCD());
-"27
-[e $U 289  ]
-[e :U 290 ]
-[e :U 289 ]
-[e $ != -> ( _BusyXLCD ..  `i -> -> -> 0 `i `uc `i 290  ]
-[e :U 291 ]
-[; ;main.c: 28: if(tempvariable == 1) {
-"28
-[e $ ! == _tempvariable -> 1 `i 292  ]
+[e $ ! == _count -> -> 100000 `l `ul 282  ]
 {
-[; ;main.c: 29: _delay((unsigned long)((1000)*(4000000/4000.0)));
+[; ;main.c: 27: init_XLCD();
+"27
+[e ( _init_XLCD ..  ]
+[; ;main.c: 28: order[0] = (0);
+"28
+[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 29: order[1] = (0);
 "29
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 30: order[2] = (0);
 "30
-}
-[e :U 292 ]
+[e = *U + &U _order * -> -> -> 2 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 31: rd0end = 1;
+"31
+[e = _rd0end -> 1 `i ]
+[; ;main.c: 32: rd1end = 1;
 "32
+[e = _rd1end -> 1 `i ]
+[; ;main.c: 33: rd2end = 1;
+"33
+[e = _rd2end -> 1 `i ]
+[; ;main.c: 34: count = 0;
+"34
+[e = _count -> -> -> 0 `i `l `ul ]
+"35
 }
 [e :U 282 ]
-[; ;main.c: 30: }
-[; ;main.c: 32: }
-[; ;main.c: 33: testbuffer = tempvariable;
-"33
-[e = _testbuffer _tempvariable ]
-"34
+[; ;main.c: 35: }
+[; ;main.c: 38: if(PORTDbits.RD0 == 1 && rd0end == 1) {
+"38
+[e $ ! && == -> . . _PORTDbits 0 0 `i -> 1 `i == _rd0end -> 1 `i 283  ]
+{
+[; ;main.c: 39: rd0end = 0;
+"39
+[e = _rd0end -> 0 `i ]
+[; ;main.c: 40: if(order[0] == (0)) {
+"40
+[e $ ! == -> *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux `i -> 0 `i 284  ]
+{
+[; ;main.c: 41: order[0] = 'M';
+"41
+[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 77 `ui `uc ]
+"42
+}
+[; ;main.c: 42: }
+[e $U 285  ]
+"43
+[e :U 284 ]
+[; ;main.c: 43: else if(order[1] == (0)) {
+[e $ ! == -> *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux `i -> 0 `i 286  ]
+{
+[; ;main.c: 44: order[1] = 'M';
+"44
+[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 77 `ui `uc ]
+"45
+}
+[; ;main.c: 45: }
+[e $U 287  ]
+"46
+[e :U 286 ]
+[; ;main.c: 46: else {
+{
+[; ;main.c: 47: order[2] = 'M';
+"47
+[e = *U + &U _order * -> -> -> 2 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 77 `ui `uc ]
+[; ;main.c: 48: init_XLCD();
+"48
+[e ( _init_XLCD ..  ]
+[; ;main.c: 49: putrsXLCD(order);
+"49
+[e ( _putrsXLCD (1 -> &U _order `*Cuc ]
+[; ;main.c: 50: order[0] = (0);
+"50
+[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 51: order[1] = (0);
+"51
+[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 52: order[2] = (0);
+"52
+[e = *U + &U _order * -> -> -> 2 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 53: rd0end = 1;
+"53
+[e = _rd0end -> 1 `i ]
+[; ;main.c: 54: rd1end = 1;
+"54
+[e = _rd1end -> 1 `i ]
+[; ;main.c: 55: rd2end = 1;
+"55
+[e = _rd2end -> 1 `i ]
+[; ;main.c: 56: _delay((unsigned long)((2000)*(4000000/4000.0)));
+"56
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"58
+}
+[e :U 287 ]
+[e :U 285 ]
+"59
+}
+[e :U 283 ]
+[; ;main.c: 58: }
+[; ;main.c: 59: }
+[; ;main.c: 61: if(PORTDbits.RD1 == 1 && rd1end == 1) {
+"61
+[e $ ! && == -> . . _PORTDbits 0 1 `i -> 1 `i == _rd1end -> 1 `i 288  ]
+{
+[; ;main.c: 62: rd1end = 0;
+"62
+[e = _rd1end -> 0 `i ]
+[; ;main.c: 63: if(order[0] == (0)) {
+"63
+[e $ ! == -> *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux `i -> 0 `i 289  ]
+{
+[; ;main.c: 64: order[0] = 'L';
+"64
+[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 76 `ui `uc ]
+"65
+}
+[; ;main.c: 65: }
+[e $U 290  ]
+"66
+[e :U 289 ]
+[; ;main.c: 66: else if(order[1] == (0)) {
+[e $ ! == -> *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux `i -> 0 `i 291  ]
+{
+[; ;main.c: 67: order[1] = 'L';
+"67
+[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 76 `ui `uc ]
+"68
+}
+[; ;main.c: 68: }
+[e $U 292  ]
+"69
+[e :U 291 ]
+[; ;main.c: 69: else {
+{
+[; ;main.c: 70: order[2] = 'L';
+"70
+[e = *U + &U _order * -> -> -> 2 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 76 `ui `uc ]
+[; ;main.c: 71: init_XLCD();
+"71
+[e ( _init_XLCD ..  ]
+[; ;main.c: 72: putrsXLCD(order);
+"72
+[e ( _putrsXLCD (1 -> &U _order `*Cuc ]
+[; ;main.c: 73: order[0] = (0);
+"73
+[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 74: order[1] = (0);
+"74
+[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 75: order[2] = (0);
+"75
+[e = *U + &U _order * -> -> -> 2 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 76: rd0end = 1;
+"76
+[e = _rd0end -> 1 `i ]
+[; ;main.c: 77: rd1end = 1;
+"77
+[e = _rd1end -> 1 `i ]
+[; ;main.c: 78: rd2end = 1;
+"78
+[e = _rd2end -> 1 `i ]
+[; ;main.c: 79: _delay((unsigned long)((2000)*(4000000/4000.0)));
+"79
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"81
+}
+[e :U 292 ]
+[e :U 290 ]
+"82
+}
+[e :U 288 ]
+[; ;main.c: 81: }
+[; ;main.c: 82: }
+[; ;main.c: 84: if(PORTDbits.RD2 == 1 && rd2end == 1) {
+"84
+[e $ ! && == -> . . _PORTDbits 0 2 `i -> 1 `i == _rd2end -> 1 `i 293  ]
+{
+[; ;main.c: 85: rd2end = 0;
+"85
+[e = _rd2end -> 0 `i ]
+[; ;main.c: 86: if(order[0] == (0)) {
+"86
+[e $ ! == -> *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux `i -> 0 `i 294  ]
+{
+[; ;main.c: 87: order[0] = 'R';
+"87
+[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 82 `ui `uc ]
+"88
+}
+[; ;main.c: 88: }
+[e $U 295  ]
+"89
+[e :U 294 ]
+[; ;main.c: 89: else if(order[1] == (0)) {
+[e $ ! == -> *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux `i -> 0 `i 296  ]
+{
+[; ;main.c: 90: order[1] = 'R';
+"90
+[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 82 `ui `uc ]
+"91
+}
+[; ;main.c: 91: }
+[e $U 297  ]
+"92
+[e :U 296 ]
+[; ;main.c: 92: else {
+{
+[; ;main.c: 93: order[2] = 'R';
+"93
+[e = *U + &U _order * -> -> -> 2 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 82 `ui `uc ]
+[; ;main.c: 94: init_XLCD();
+"94
+[e ( _init_XLCD ..  ]
+[; ;main.c: 95: putrsXLCD(order);
+"95
+[e ( _putrsXLCD (1 -> &U _order `*Cuc ]
+[; ;main.c: 96: order[0] = (0);
+"96
+[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 97: order[1] = (0);
+"97
+[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 98: order[2] = (0);
+"98
+[e = *U + &U _order * -> -> -> 2 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 99: rd0end = 1;
+"99
+[e = _rd0end -> 1 `i ]
+[; ;main.c: 100: rd1end = 1;
+"100
+[e = _rd1end -> 1 `i ]
+[; ;main.c: 101: rd2end = 1;
+"101
+[e = _rd2end -> 1 `i ]
+[; ;main.c: 102: _delay((unsigned long)((2000)*(4000000/4000.0)));
+"102
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"104
+}
+[e :U 297 ]
+[e :U 295 ]
+"105
+}
+[e :U 293 ]
+"106
 }
 [e :U 279 ]
-"18
+"23
 [e $U 280  ]
 [e :U 281 ]
-[; ;main.c: 34: }
-[; ;main.c: 36: return;
-"36
+[; ;main.c: 104: }
+[; ;main.c: 105: }
+[; ;main.c: 106: }
+[; ;main.c: 108: return;
+"108
 [e $UE 278  ]
-[; ;main.c: 37: }
-"37
+[; ;main.c: 109: }
+"109
 [e :UE 278 ]
 }
-"39
+"111
 [v _DelayFor18TCY `(v ~T0 @X0 1 ef ]
-"40
+"112
 {
-[; ;main.c: 39: void DelayFor18TCY( void )
-[; ;main.c: 40: {_delay((unsigned long)((20)*(4000000/4000000.0)));
+[; ;main.c: 111: void DelayFor18TCY( void )
+[; ;main.c: 112: {_delay((unsigned long)((20)*(4000000/4000000.0)));
 [e :U _DelayFor18TCY ]
 [f ]
 [e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-[; ;main.c: 41: return;
-"41
-[e $UE 293  ]
-[; ;main.c: 42: }
-"42
-[e :UE 293 ]
+[; ;main.c: 113: return;
+"113
+[e $UE 298  ]
+[; ;main.c: 114: }
+"114
+[e :UE 298 ]
 }
-"44
+"116
 [v _DelayPORXLCD `(v ~T0 @X0 1 ef ]
-"45
+"117
 {
-[; ;main.c: 44: void DelayPORXLCD(void)
-[; ;main.c: 45: {
+[; ;main.c: 116: void DelayPORXLCD(void)
+[; ;main.c: 117: {
 [e :U _DelayPORXLCD ]
 [f ]
-[; ;main.c: 46: _delay((unsigned long)((15)*(4000000/4000.0)));
-"46
+[; ;main.c: 118: _delay((unsigned long)((15)*(4000000/4000.0)));
+"118
 [e ( __delay (1 -> * -> -> 15 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 47: }
-"47
-[e :UE 294 ]
+[; ;main.c: 119: }
+"119
+[e :UE 299 ]
 }
-"49
+"121
 [v _DelayXLCD `(v ~T0 @X0 1 ef ]
-"50
+"122
 {
-[; ;main.c: 49: void DelayXLCD(void)
-[; ;main.c: 50: {
+[; ;main.c: 121: void DelayXLCD(void)
+[; ;main.c: 122: {
 [e :U _DelayXLCD ]
 [f ]
-[; ;main.c: 51: _delay((unsigned long)((5)*(4000000/4000.0)));
-"51
+[; ;main.c: 123: _delay((unsigned long)((5)*(4000000/4000.0)));
+"123
 [e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 52: }
-"52
-[e :UE 295 ]
+[; ;main.c: 124: }
+"124
+[e :UE 300 ]
 }
-"57
+"129
 [v _init_XLCD `(v ~T0 @X0 1 ef ]
-"58
+"130
 {
-[; ;main.c: 57: void init_XLCD(void)
-[; ;main.c: 58: {
+[; ;main.c: 129: void init_XLCD(void)
+[; ;main.c: 130: {
 [e :U _init_XLCD ]
 [f ]
-[; ;main.c: 59: OpenXLCD(0b00101100&0b00111000);
-"59
+[; ;main.c: 131: OpenXLCD(0b00101100&0b00111000);
+"131
 [e ( _OpenXLCD (1 -> & -> 44 `i -> 56 `i `uc ]
-[; ;main.c: 61: while(BusyXLCD());
-"61
-[e $U 297  ]
-[e :U 298 ]
-[e :U 297 ]
-[e $ != -> ( _BusyXLCD ..  `i -> -> -> 0 `i `uc `i 298  ]
-[e :U 299 ]
-[; ;main.c: 63: WriteCmdXLCD(0x06);
-"63
+[; ;main.c: 133: while(BusyXLCD());
+"133
+[e $U 302  ]
+[e :U 303 ]
+[e :U 302 ]
+[e $ != -> ( _BusyXLCD ..  `i -> -> -> 0 `i `uc `i 303  ]
+[e :U 304 ]
+[; ;main.c: 135: WriteCmdXLCD(0x06);
+"135
 [e ( _WriteCmdXLCD (1 -> -> 6 `i `uc ]
-[; ;main.c: 64: WriteCmdXLCD(0x0C);
-"64
+[; ;main.c: 136: WriteCmdXLCD(0x0C);
+"136
 [e ( _WriteCmdXLCD (1 -> -> 12 `i `uc ]
-[; ;main.c: 65: }
-"65
-[e :UE 296 ]
+[; ;main.c: 137: }
+"137
+[e :UE 301 ]
 }
-[p f _sprintf 8388736 ]
-[a 1C 37 100 0 ]
-

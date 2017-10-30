@@ -5,8 +5,6 @@
 [d frameptr 4065 ]
 "11 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\busyxlcd.c
 [v _BusyXLCD BusyXLCD `(uc  1 e 1 0 ]
-"492 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
-[v _sprintf sprintf `(i  1 e 2 0 ]
 "62 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\ftadd.c
@@ -17,10 +15,6 @@
 [v ___ftmul __ftmul `(f  1 e 3 0 ]
 "20 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 3 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwdiv.c
-[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwmod.c
-[v ___lwmod __lwmod `(ui  1 e 2 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 3 0 ]
 "245
@@ -35,11 +29,11 @@
 [v _Delay10KTCYx Delay10KTCYx `(v  1 e 1 0 ]
 "6 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"39
+"111
 [v _DelayFor18TCY DelayFor18TCY `(v  1 e 1 0 ]
-"44
+"116
 [v _DelayPORXLCD DelayPORXLCD `(v  1 e 1 0 ]
-"57
+"129
 [v _init_XLCD init_XLCD `(v  1 e 1 0 ]
 "19 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\openxlcd.c
 [v _OpenXLCD OpenXLCD `(v  1 e 1 0 ]
@@ -53,44 +47,38 @@
 [v _WriteDataXLCD WriteDataXLCD `(v  1 e 1 0 ]
 "269 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic18f4520.h
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
-[s S33 . 1 `uc 1 RB0 1 0 :1:0 
-`uc 1 RB1 1 0 :1:1 
-`uc 1 RB2 1 0 :1:2 
-`uc 1 RB3 1 0 :1:3 
-`uc 1 RB4 1 0 :1:4 
-`uc 1 RB5 1 0 :1:5 
-`uc 1 RB6 1 0 :1:6 
-`uc 1 RB7 1 0 :1:7 
+[s S33 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
 ]
-"313
-[s S81 . 1 `uc 1 INT0 1 0 :1:0 
-`uc 1 INT1 1 0 :1:1 
-`uc 1 INT2 1 0 :1:2 
-`uc 1 CCP2 1 0 :1:3 
-`uc 1 KBI0 1 0 :1:4 
-`uc 1 KBI1 1 0 :1:5 
-`uc 1 KBI2 1 0 :1:6 
-`uc 1 KBI3 1 0 :1:7 
+"667
+[s S77 . 1 `uc 1 PSP0 1 0 :1:0 
+`uc 1 PSP1 1 0 :1:1 
+`uc 1 PSP2 1 0 :1:2 
+`uc 1 PSP3 1 0 :1:3 
+`uc 1 PSP4 1 0 :1:4 
+`uc 1 PSP5 1 0 :1:5 
+`uc 1 PSP6 1 0 :1:6 
+`uc 1 PSP7 1 0 :1:7 
 ]
-[s S90 . 1 `uc 1 AN12 1 0 :1:0 
-`uc 1 AN10 1 0 :1:1 
-`uc 1 AN8 1 0 :1:2 
-`uc 1 AN9 1 0 :1:3 
-`uc 1 AN11 1 0 :1:4 
-`uc 1 PGM 1 0 :1:5 
-`uc 1 PGC 1 0 :1:6 
-`uc 1 PGD 1 0 :1:7 
+[s S86 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 P1B 1 0 :1:5 
+`uc 1 P1C 1 0 :1:6 
+`uc 1 P1D 1 0 :1:7 
 ]
-[s S99 . 1 `uc 1 FLT0 1 0 :1:0 
+[s S91 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 SS2 1 0 :1:7 
 ]
-[s S101 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 CCP2_PA2 1 0 :1:3 
-]
-[u S104 . 1 `S33 1 . 1 0 `S81 1 . 1 0 `S90 1 . 1 0 `S99 1 . 1 0 `S101 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES104  1 e 1 @3969 ]
+[u S94 . 1 `S33 1 . 1 0 `S77 1 . 1 0 `S86 1 . 1 0 `S91 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES94  1 e 1 @3971 ]
 "975
 [v _LATA LATA `VEuc  1 e 1 @3977 ]
-[s S203 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S183 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -100,7 +88,7 @@
 `uc 1 LATA7 1 0 :1:7 
 ]
 "1002
-[s S212 . 1 `uc 1 LA0 1 0 :1:0 
+[s S192 . 1 `uc 1 LA0 1 0 :1:0 
 `uc 1 LA1 1 0 :1:1 
 `uc 1 LA2 1 0 :1:2 
 `uc 1 LA3 1 0 :1:3 
@@ -109,11 +97,11 @@
 `uc 1 LA6 1 0 :1:6 
 `uc 1 LA7 1 0 :1:7 
 ]
-[u S221 . 1 `S203 1 . 1 0 `S212 1 . 1 0 ]
-[v _LATAbits LATAbits `VES221  1 e 1 @3977 ]
+[u S201 . 1 `S183 1 . 1 0 `S192 1 . 1 0 ]
+[v _LATAbits LATAbits `VES201  1 e 1 @3977 ]
 "1087
 [v _LATB LATB `VEuc  1 e 1 @3978 ]
-[s S257 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S237 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -123,7 +111,7 @@
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "1507
-[s S266 . 1 `uc 1 RA0 1 0 :1:0 
+[s S246 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -132,25 +120,25 @@
 `uc 1 RA6 1 0 :1:6 
 `uc 1 RA7 1 0 :1:7 
 ]
-[u S275 . 1 `S257 1 . 1 0 `S266 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES275  1 e 1 @3986 ]
+[u S255 . 1 `S237 1 . 1 0 `S246 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES255  1 e 1 @3986 ]
 "1697
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
-[s S24 . 1 `uc 1 TRISB0 1 0 :1:0 
-`uc 1 TRISB1 1 0 :1:1 
-`uc 1 TRISB2 1 0 :1:2 
-`uc 1 TRISB3 1 0 :1:3 
-`uc 1 TRISB4 1 0 :1:4 
-`uc 1 TRISB5 1 0 :1:5 
-`uc 1 TRISB6 1 0 :1:6 
-`uc 1 TRISB7 1 0 :1:7 
-]
-"1729
-[u S42 . 1 `S24 1 . 1 0 `S33 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES42  1 e 1 @3987 ]
 "2141
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
-[s S629 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S24 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"2173
+[u S42 . 1 `S24 1 . 1 0 `S33 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES42  1 e 1 @3989 ]
+[s S609 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSPIE 1 0 :1:3 
@@ -160,13 +148,13 @@
 `uc 1 PSPIE 1 0 :1:7 
 ]
 "2614
-[s S638 . 1 `uc 1 . 1 0 :4:0 
+[s S618 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IE 1 0 :1:4 
 `uc 1 RC1IE 1 0 :1:5 
 ]
-[u S642 . 1 `S629 1 . 1 0 `S638 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES642  1 e 1 @3997 ]
-[s S714 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S622 . 1 `S609 1 . 1 0 `S618 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES622  1 e 1 @3997 ]
+[s S694 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -176,55 +164,55 @@
 `uc 1 PSPIF 1 0 :1:7 
 ]
 "2691
-[s S723 . 1 `uc 1 . 1 0 :4:0 
+[s S703 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IF 1 0 :1:4 
 `uc 1 RC1IF 1 0 :1:5 
 ]
-[u S727 . 1 `S714 1 . 1 0 `S723 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES727  1 e 1 @3998 ]
+[u S707 . 1 `S694 1 . 1 0 `S703 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES707  1 e 1 @3998 ]
 "4617
 [v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
 "4688
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
 "4773
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
-[s S515 . 1 `uc 1 . 1 0 :1:0 
+[s S495 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_NOT_DONE 1 0 :1:1 
 ]
 "4817
-[s S518 . 1 `uc 1 ADON 1 0 :1:0 
+[s S498 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 ]
-[s S522 . 1 `uc 1 . 1 0 :1:0 
+[s S502 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
 `uc 1 CHS2 1 0 :1:4 
 `uc 1 CHS3 1 0 :1:5 
 ]
-[s S529 . 1 `uc 1 . 1 0 :1:0 
+[s S509 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 DONE 1 0 :1:1 
 ]
-[s S532 . 1 `uc 1 . 1 0 :1:0 
+[s S512 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_DONE 1 0 :1:1 
 ]
-[s S535 . 1 `uc 1 . 1 0 :1:0 
+[s S515 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S538 . 1 `uc 1 . 1 0 :1:0 
+[s S518 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[s S541 . 1 `uc 1 . 1 0 :1:0 
+[s S521 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GODONE 1 0 :1:1 
 ]
-[u S544 . 1 `S515 1 . 1 0 `S518 1 . 1 0 `S522 1 . 1 0 `S529 1 . 1 0 `S532 1 . 1 0 `S535 1 . 1 0 `S538 1 . 1 0 `S541 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES544  1 e 1 @4034 ]
+[u S524 . 1 `S495 1 . 1 0 `S498 1 . 1 0 `S502 1 . 1 0 `S509 1 . 1 0 `S512 1 . 1 0 `S515 1 . 1 0 `S518 1 . 1 0 `S521 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES524  1 e 1 @4034 ]
 "4899
 [v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
 "4906
 [v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
-[s S761 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S741 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -234,7 +222,7 @@
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "6722
-[s S770 . 1 `uc 1 . 1 0 :1:0 
+[s S750 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -243,64 +231,30 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S779 . 1 `uc 1 . 1 0 :6:0 
+[s S759 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S783 . 1 `S761 1 . 1 0 `S770 1 . 1 0 `S779 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES783  1 e 1 @4082 ]
-"354 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
-[v _dpowers dpowers `C[5]ui  1 s 10 dpowers ]
+[u S763 . 1 `S741 1 . 1 0 `S750 1 . 1 0 `S759 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES763  1 e 1 @4082 ]
 "6 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
+"22
+[v main@count count `ul  1 a 4 11 ]
+"18
+[v main@order order `[3]uc  1 a 3 21 ]
 "21
-[v main@buffer buffer `[10]uc  1 a 10 28 ]
+[v main@rd2end rd2end `i  1 a 2 19 ]
+"20
+[v main@rd1end rd1end `i  1 a 2 17 ]
 "19
-[v main@tempvariable tempvariable `i  1 a 2 40 ]
-"15
-[v main@testbuffer testbuffer `i  1 a 2 38 ]
-"37
-} 0
-"492 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
-[v _sprintf sprintf `(i  1 e 2 0 ]
-{
-"528
-[v sprintf@val val `ui  1 a 2 23 ]
-"494
-[v sprintf@ap ap `[1]*.39v  1 a 2 19 ]
-"499
-[v sprintf@c c `c  1 a 1 25 ]
-"506
-[v sprintf@prec prec `c  1 a 1 22 ]
-"508
-[v sprintf@flag flag `uc  1 a 1 21 ]
-"492
-[v sprintf@sp sp `*.39uc  1 p 2 12 ]
-[v sprintf@f f `*.25Cuc  1 p 2 14 ]
-"1541
-} 0
-"8 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwmod.c
-[v ___lwmod __lwmod `(ui  1 e 2 0 ]
-{
-"11
-[v ___lwmod@counter counter `uc  1 a 1 11 ]
-"8
-[v ___lwmod@dividend dividend `ui  1 p 2 7 ]
-[v ___lwmod@divisor divisor `ui  1 p 2 9 ]
-"26
-} 0
-"8 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwdiv.c
-[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-{
-"11
-[v ___lwdiv@quotient quotient `ui  1 a 2 4 ]
-"12
-[v ___lwdiv@counter counter `uc  1 a 1 6 ]
-"8
-[v ___lwdiv@dividend dividend `ui  1 p 2 0 ]
-[v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
-"31
+[v main@rd0end rd0end `i  1 a 2 15 ]
+"17
+[v main@startcount startcount `i  1 a 2 9 ]
+"14
+[v main@recorded recorded `i  1 a 2 7 ]
+"109
 } 0
 "16 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\putrxlcd.c
 [v _putrsXLCD putrsXLCD `(v  1 e 1 0 ]
@@ -317,10 +271,10 @@
 [v WriteDataXLCD@data data `uc  1 a 1 0 ]
 "63
 } 0
-"57 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\main.c
+"129 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\main.c
 [v _init_XLCD init_XLCD `(v  1 e 1 0 ]
 {
-"65
+"137
 } 0
 "19 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\openxlcd.c
 [v _OpenXLCD OpenXLCD `(v  1 e 1 0 ]
@@ -349,10 +303,10 @@
 [v SetDDRamAddr@DDaddr DDaddr `uc  1 a 1 3 ]
 "60
 } 0
-"44 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\main.c
+"116 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\main.c
 [v _DelayPORXLCD DelayPORXLCD `(v  1 e 1 0 ]
 {
-"47
+"119
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\pic18\d10ktcyx.c
 [v _Delay10KTCYx Delay10KTCYx `(v  1 e 1 0 ]
@@ -367,8 +321,8 @@
 {
 "57
 } 0
-"39 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\main.c
+"111 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\main.c
 [v _DelayFor18TCY DelayFor18TCY `(v  1 e 1 0 ]
 {
-"42
+"114
 } 0
