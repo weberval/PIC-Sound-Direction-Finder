@@ -4,7 +4,6 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>Definitions.h</itemPath>
       <itemPath>xlcd.h</itemPath>
       <itemPath>adc.h</itemPath>
       <itemPath>pconfig.h</itemPath>
@@ -27,13 +26,6 @@
       <itemPath>setddram.c</itemPath>
       <itemPath>wcmdxlcd.c</itemPath>
       <itemPath>writdata.c</itemPath>
-      <itemPath>adcbusy.c</itemPath>
-      <itemPath>adcclose.c</itemPath>
-      <itemPath>adcconv.c</itemPath>
-      <itemPath>adcopen.c</itemPath>
-      <itemPath>adcread.c</itemPath>
-      <itemPath>adcselchconv.c</itemPath>
-      <itemPath>adcsetch.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

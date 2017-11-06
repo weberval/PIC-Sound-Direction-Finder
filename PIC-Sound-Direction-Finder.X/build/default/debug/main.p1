@@ -2994,10 +2994,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 17: int startcount = 0;
 [e = _startcount -> 0 `i ]
 "18
-[v _order `uc ~T0 @X0 -> 3 `i a ]
+[v _order `uc ~T0 @X0 -> 2 `i a ]
 "19
 [v _rd0end `i ~T0 @X0 1 a ]
-[; ;main.c: 18: char order[3];
+[; ;main.c: 18: char order[2];
 [; ;main.c: 19: int rd0end = 1;
 [e = _rd0end -> 1 `i ]
 "20
@@ -3009,352 +3009,401 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 21: int rd2end = 1;
 [e = _rd2end -> 1 `i ]
 "22
-[v _count `ul ~T0 @X0 1 a ]
-[; ;main.c: 22: unsigned long count = 0;
-[e = _count -> -> -> 0 `i `l `ul ]
-[; ;main.c: 23: while(1) {
+[v _duration `i ~T0 @X0 1 a ]
 "23
-[e :U 280 ]
-{
-[; ;main.c: 25: if(count == 100000) {
+[v _tempcounter `ul ~T0 @X0 1 a ]
+[; ;main.c: 22: int duration;
+[; ;main.c: 23: unsigned long tempcounter = 0;
+[e = _tempcounter -> -> -> 0 `i `l `ul ]
+"24
+[v _count `ul ~T0 @X0 1 a ]
+[; ;main.c: 24: unsigned long count = 0;
+[e = _count -> -> -> 0 `i `l `ul ]
+[; ;main.c: 25: while(1) {
 "25
-[e $ ! == _count -> -> 100000 `l `ul 282  ]
+[e :U 280 ]
 {
 [; ;main.c: 26: ++count;
 "26
 [e =+ _count -> -> -> 1 `i `l `ul ]
-[; ;main.c: 27: init_XLCD();
+[; ;main.c: 27: if(count == 100000) {
 "27
-[e ( _init_XLCD ..  ]
-[; ;main.c: 28: order[0] = (0);
-"28
-[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 29: order[1] = (0);
+[e $ ! == _count -> -> 100000 `l `ul 282  ]
+{
+[; ;main.c: 29: init_XLCD();
 "29
-[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 30: order[2] = (0);
+[e ( _init_XLCD ..  ]
+[; ;main.c: 30: order[0] = (0);
 "30
-[e = *U + &U _order * -> -> -> 2 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 31: rd0end = 1;
+[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 31: order[1] = (0);
 "31
-[e = _rd0end -> 1 `i ]
-[; ;main.c: 32: rd1end = 1;
+[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 32: rd0end = 1;
 "32
-[e = _rd1end -> 1 `i ]
-[; ;main.c: 33: rd2end = 1;
+[e = _rd0end -> 1 `i ]
+[; ;main.c: 33: rd1end = 1;
 "33
-[e = _rd2end -> 1 `i ]
-[; ;main.c: 34: count = 0;
+[e = _rd1end -> 1 `i ]
+[; ;main.c: 34: rd2end = 1;
 "34
-[e = _count -> -> -> 0 `i `l `ul ]
+[e = _rd2end -> 1 `i ]
+[; ;main.c: 35: count = 0;
 "35
+[e = _count -> -> -> 0 `i `l `ul ]
+"36
 }
 [e :U 282 ]
-[; ;main.c: 35: }
-[; ;main.c: 38: if(PORTDbits.RD0 == 1 && rd0end == 1) {
-"38
+[; ;main.c: 36: }
+[; ;main.c: 39: if(PORTDbits.RD0 == 1 && rd0end == 1) {
+"39
 [e $ ! && == -> . . _PORTDbits 0 0 `i -> 1 `i == _rd0end -> 1 `i 283  ]
 {
-[; ;main.c: 39: rd0end = 0;
-"39
+[; ;main.c: 41: rd0end = 0;
+"41
 [e = _rd0end -> 0 `i ]
-[; ;main.c: 40: if(order[0] == (0)) {
-"40
+[; ;main.c: 42: if(order[0] == (0)) {
+"42
 [e $ ! == -> *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux `i -> 0 `i 284  ]
 {
-[; ;main.c: 41: order[0] = 'M';
-"41
-[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 77 `ui `uc ]
-"42
-}
-[; ;main.c: 42: }
-[e $U 285  ]
+[; ;main.c: 43: order[0] = 'M';
 "43
-[e :U 284 ]
-[; ;main.c: 43: else if(order[1] == (0)) {
-[e $ ! == -> *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux `i -> 0 `i 286  ]
-{
-[; ;main.c: 44: order[1] = 'M';
+[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 77 `ui `uc ]
+[; ;main.c: 44: tempcounter = count;
 "44
-[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 77 `ui `uc ]
+[e = _tempcounter _count ]
 "45
 }
 [; ;main.c: 45: }
-[e $U 287  ]
+[e $U 285  ]
 "46
-[e :U 286 ]
-[; ;main.c: 46: else {
+[e :U 284 ]
+[; ;main.c: 46: else if(order[1] == (0)) {
+[e $ ! == -> *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux `i -> 0 `i 286  ]
 {
-[; ;main.c: 47: order[2] = 'M';
+[; ;main.c: 47: order[1] = 'M';
 "47
-[e = *U + &U _order * -> -> -> 2 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 77 `ui `uc ]
-[; ;main.c: 48: init_XLCD();
+[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 77 `ui `uc ]
+[; ;main.c: 48: duration = count - tempcounter;
 "48
-[e ( _init_XLCD ..  ]
-[; ;main.c: 49: putrsXLCD(order);
+[e = _duration -> - _count _tempcounter `i ]
 "49
-[e ( _putrsXLCD (1 -> &U _order `*Cuc ]
-[; ;main.c: 50: order[0] = (0);
+}
+[; ;main.c: 49: }
+[e $U 287  ]
 "50
-[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 51: order[1] = (0);
+[e :U 286 ]
+[; ;main.c: 50: else {
+{
+[; ;main.c: 51: if(duration > 0x000F) {
 "51
-[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 52: order[2] = (0);
+[e $ ! > _duration -> 15 `i 288  ]
+{
+[; ;main.c: 52: order[1] = (0);
 "52
-[e = *U + &U _order * -> -> -> 2 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 53: rd0end = 1;
+[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
 "53
-[e = _rd0end -> 1 `i ]
-[; ;main.c: 54: rd1end = 1;
+}
+[e :U 288 ]
+[; ;main.c: 53: }
+[; ;main.c: 54: init_XLCD();
 "54
-[e = _rd1end -> 1 `i ]
-[; ;main.c: 55: rd2end = 1;
+[e ( _init_XLCD ..  ]
+[; ;main.c: 55: putrsXLCD(order);
 "55
-[e = _rd2end -> 1 `i ]
-[; ;main.c: 56: _delay((unsigned long)((2000)*(4000000/4000.0)));
+[e ( _putrsXLCD (1 -> &U _order `*Cuc ]
+[; ;main.c: 56: order[0] = (0);
 "56
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 57: order[1] = (0);
+"57
+[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 58: rd0end = 1;
 "58
+[e = _rd0end -> 1 `i ]
+[; ;main.c: 59: rd1end = 1;
+"59
+[e = _rd1end -> 1 `i ]
+[; ;main.c: 60: rd2end = 1;
+"60
+[e = _rd2end -> 1 `i ]
+[; ;main.c: 61: duration = 0;
+"61
+[e = _duration -> 0 `i ]
+[; ;main.c: 62: _delay((unsigned long)((2000)*(4000000/4000.0)));
+"62
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"64
 }
 [e :U 287 ]
 [e :U 285 ]
-"59
-}
-[e :U 283 ]
-[; ;main.c: 58: }
-[; ;main.c: 59: }
-[; ;main.c: 61: if(PORTDbits.RD1 == 1 && rd1end == 1) {
-"61
-[e $ ! && == -> . . _PORTDbits 0 1 `i -> 1 `i == _rd1end -> 1 `i 288  ]
-{
-[; ;main.c: 62: rd1end = 0;
-"62
-[e = _rd1end -> 0 `i ]
-[; ;main.c: 63: if(order[0] == (0)) {
-"63
-[e $ ! == -> *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux `i -> 0 `i 289  ]
-{
-[; ;main.c: 64: order[0] = 'L';
-"64
-[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 76 `ui `uc ]
 "65
 }
+[e :U 283 ]
+[; ;main.c: 64: }
 [; ;main.c: 65: }
-[e $U 290  ]
-"66
-[e :U 289 ]
-[; ;main.c: 66: else if(order[1] == (0)) {
-[e $ ! == -> *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux `i -> 0 `i 291  ]
-{
-[; ;main.c: 67: order[1] = 'L';
+[; ;main.c: 67: if(PORTDbits.RD1 == 1 && rd1end == 1) {
 "67
-[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 76 `ui `uc ]
+[e $ ! && == -> . . _PORTDbits 0 1 `i -> 1 `i == _rd1end -> 1 `i 289  ]
+{
+[; ;main.c: 68: rd1end = 0;
 "68
-}
-[; ;main.c: 68: }
-[e $U 292  ]
+[e = _rd1end -> 0 `i ]
+[; ;main.c: 69: if(order[0] == (0)) {
 "69
-[e :U 291 ]
-[; ;main.c: 69: else {
+[e $ ! == -> *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux `i -> 0 `i 290  ]
 {
-[; ;main.c: 70: order[2] = 'L';
+[; ;main.c: 70: order[0] = 'L';
 "70
-[e = *U + &U _order * -> -> -> 2 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 76 `ui `uc ]
-[; ;main.c: 71: init_XLCD();
+[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 76 `ui `uc ]
+[; ;main.c: 71: tempcounter = count;
 "71
-[e ( _init_XLCD ..  ]
-[; ;main.c: 72: putrsXLCD(order);
+[e = _tempcounter _count ]
 "72
-[e ( _putrsXLCD (1 -> &U _order `*Cuc ]
-[; ;main.c: 73: order[0] = (0);
+}
+[; ;main.c: 72: }
+[e $U 291  ]
 "73
-[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 74: order[1] = (0);
-"74
-[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 75: order[2] = (0);
-"75
-[e = *U + &U _order * -> -> -> 2 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 76: rd0end = 1;
-"76
-[e = _rd0end -> 1 `i ]
-[; ;main.c: 77: rd1end = 1;
-"77
-[e = _rd1end -> 1 `i ]
-[; ;main.c: 78: rd2end = 1;
-"78
-[e = _rd2end -> 1 `i ]
-[; ;main.c: 79: _delay((unsigned long)((2000)*(4000000/4000.0)));
-"79
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"81
-}
-[e :U 292 ]
 [e :U 290 ]
-"82
-}
-[e :U 288 ]
-[; ;main.c: 81: }
-[; ;main.c: 82: }
-[; ;main.c: 84: if(PORTDbits.RD2 == 1 && rd2end == 1) {
-"84
-[e $ ! && == -> . . _PORTDbits 0 2 `i -> 1 `i == _rd2end -> 1 `i 293  ]
+[; ;main.c: 73: else if(order[1] == (0)) {
+[e $ ! == -> *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux `i -> 0 `i 292  ]
 {
-[; ;main.c: 85: rd2end = 0;
-"85
-[e = _rd2end -> 0 `i ]
-[; ;main.c: 86: if(order[0] == (0)) {
-"86
-[e $ ! == -> *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux `i -> 0 `i 294  ]
-{
-[; ;main.c: 87: order[0] = 'R';
-"87
-[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 82 `ui `uc ]
-"88
+[; ;main.c: 74: order[1] = 'L';
+"74
+[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 76 `ui `uc ]
+[; ;main.c: 75: duration = count - tempcounter;
+"75
+[e = _duration -> - _count _tempcounter `i ]
+"76
 }
-[; ;main.c: 88: }
-[e $U 295  ]
-"89
+[; ;main.c: 76: }
+[e $U 293  ]
+"77
+[e :U 292 ]
+[; ;main.c: 77: else {
+{
+[; ;main.c: 78: if(duration > 0x000F) {
+"78
+[e $ ! > _duration -> 15 `i 294  ]
+{
+[; ;main.c: 79: order[1] = (0);
+"79
+[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+"80
+}
 [e :U 294 ]
-[; ;main.c: 89: else if(order[1] == (0)) {
-[e $ ! == -> *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux `i -> 0 `i 296  ]
-{
-[; ;main.c: 90: order[1] = 'R';
-"90
-[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 82 `ui `uc ]
+[; ;main.c: 80: }
+[; ;main.c: 81: init_XLCD();
+"81
+[e ( _init_XLCD ..  ]
+[; ;main.c: 82: putrsXLCD(order);
+"82
+[e ( _putrsXLCD (1 -> &U _order `*Cuc ]
+[; ;main.c: 83: order[0] = (0);
+"83
+[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 84: order[1] = (0);
+"84
+[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 85: rd0end = 1;
+"85
+[e = _rd0end -> 1 `i ]
+[; ;main.c: 86: rd1end = 1;
+"86
+[e = _rd1end -> 1 `i ]
+[; ;main.c: 87: rd2end = 1;
+"87
+[e = _rd2end -> 1 `i ]
+[; ;main.c: 88: duration = 0;
+"88
+[e = _duration -> 0 `i ]
+[; ;main.c: 89: _delay((unsigned long)((2000)*(4000000/4000.0)));
+"89
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "91
 }
-[; ;main.c: 91: }
-[e $U 297  ]
-"92
-[e :U 296 ]
-[; ;main.c: 92: else {
-{
-[; ;main.c: 93: order[2] = 'R';
-"93
-[e = *U + &U _order * -> -> -> 2 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 82 `ui `uc ]
-[; ;main.c: 94: init_XLCD();
-"94
-[e ( _init_XLCD ..  ]
-[; ;main.c: 95: putrsXLCD(order);
-"95
-[e ( _putrsXLCD (1 -> &U _order `*Cuc ]
-[; ;main.c: 96: order[0] = (0);
-"96
-[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 97: order[1] = (0);
-"97
-[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 98: order[2] = (0);
-"98
-[e = *U + &U _order * -> -> -> 2 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 99: rd0end = 1;
-"99
-[e = _rd0end -> 1 `i ]
-[; ;main.c: 100: rd1end = 1;
-"100
-[e = _rd1end -> 1 `i ]
-[; ;main.c: 101: rd2end = 1;
-"101
-[e = _rd2end -> 1 `i ]
-[; ;main.c: 102: _delay((unsigned long)((2000)*(4000000/4000.0)));
-"102
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"104
-}
-[e :U 297 ]
-[e :U 295 ]
-"105
-}
 [e :U 293 ]
+[e :U 291 ]
+"92
+}
+[e :U 289 ]
+[; ;main.c: 91: }
+[; ;main.c: 92: }
+[; ;main.c: 94: if(PORTDbits.RD2 == 1 && rd2end == 1) {
+"94
+[e $ ! && == -> . . _PORTDbits 0 2 `i -> 1 `i == _rd2end -> 1 `i 295  ]
+{
+[; ;main.c: 95: rd2end = 0;
+"95
+[e = _rd2end -> 0 `i ]
+[; ;main.c: 96: if(order[0] == (0)) {
+"96
+[e $ ! == -> *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux `i -> 0 `i 296  ]
+{
+[; ;main.c: 97: order[0] = 'R';
+"97
+[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 82 `ui `uc ]
+[; ;main.c: 98: tempcounter = count;
+"98
+[e = _tempcounter _count ]
+"99
+}
+[; ;main.c: 99: }
+[e $U 297  ]
+"100
+[e :U 296 ]
+[; ;main.c: 100: else if(order[1] == (0)) {
+[e $ ! == -> *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux `i -> 0 `i 298  ]
+{
+[; ;main.c: 101: order[1] = 'R';
+"101
+[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 82 `ui `uc ]
+[; ;main.c: 102: duration = count - tempcounter;
+"102
+[e = _duration -> - _count _tempcounter `i ]
+"103
+}
+[; ;main.c: 103: }
+[e $U 299  ]
+"104
+[e :U 298 ]
+[; ;main.c: 104: else {
+{
+[; ;main.c: 105: if(duration > 0x000F) {
+"105
+[e $ ! > _duration -> 15 `i 300  ]
+{
+[; ;main.c: 106: order[1] = (0);
 "106
+[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+"107
+}
+[e :U 300 ]
+[; ;main.c: 107: }
+[; ;main.c: 108: init_XLCD();
+"108
+[e ( _init_XLCD ..  ]
+[; ;main.c: 109: putrsXLCD(order);
+"109
+[e ( _putrsXLCD (1 -> &U _order `*Cuc ]
+[; ;main.c: 110: order[0] = (0);
+"110
+[e = *U + &U _order * -> -> -> 0 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 111: order[1] = (0);
+"111
+[e = *U + &U _order * -> -> -> 1 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 112: order[2] = (0);
+"112
+[e = *U + &U _order * -> -> -> 2 `i `ui `ux -> -> # *U &U _order `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 113: rd0end = 1;
+"113
+[e = _rd0end -> 1 `i ]
+[; ;main.c: 114: rd1end = 1;
+"114
+[e = _rd1end -> 1 `i ]
+[; ;main.c: 115: rd2end = 1;
+"115
+[e = _rd2end -> 1 `i ]
+[; ;main.c: 116: duration = 0;
+"116
+[e = _duration -> 0 `i ]
+[; ;main.c: 117: _delay((unsigned long)((2000)*(4000000/4000.0)));
+"117
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"119
+}
+[e :U 299 ]
+[e :U 297 ]
+"120
+}
+[e :U 295 ]
+"121
 }
 [e :U 279 ]
-"23
+"25
 [e $U 280  ]
 [e :U 281 ]
-[; ;main.c: 104: }
-[; ;main.c: 105: }
-[; ;main.c: 106: }
-[; ;main.c: 108: return;
-"108
+[; ;main.c: 119: }
+[; ;main.c: 120: }
+[; ;main.c: 121: }
+[; ;main.c: 123: return;
+"123
 [e $UE 278  ]
-[; ;main.c: 109: }
-"109
+[; ;main.c: 124: }
+"124
 [e :UE 278 ]
 }
-"111
+"126
 [v _DelayFor18TCY `(v ~T0 @X0 1 ef ]
-"112
+"127
 {
-[; ;main.c: 111: void DelayFor18TCY( void )
-[; ;main.c: 112: {_delay((unsigned long)((20)*(4000000/4000000.0)));
+[; ;main.c: 126: void DelayFor18TCY( void )
+[; ;main.c: 127: {_delay((unsigned long)((20)*(4000000/4000000.0)));
 [e :U _DelayFor18TCY ]
 [f ]
 [e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-[; ;main.c: 113: return;
-"113
-[e $UE 298  ]
-[; ;main.c: 114: }
-"114
-[e :UE 298 ]
+[; ;main.c: 128: return;
+"128
+[e $UE 301  ]
+[; ;main.c: 129: }
+"129
+[e :UE 301 ]
 }
-"116
+"131
 [v _DelayPORXLCD `(v ~T0 @X0 1 ef ]
-"117
+"132
 {
-[; ;main.c: 116: void DelayPORXLCD(void)
-[; ;main.c: 117: {
+[; ;main.c: 131: void DelayPORXLCD(void)
+[; ;main.c: 132: {
 [e :U _DelayPORXLCD ]
 [f ]
-[; ;main.c: 118: _delay((unsigned long)((15)*(4000000/4000.0)));
-"118
+[; ;main.c: 133: _delay((unsigned long)((15)*(4000000/4000.0)));
+"133
 [e ( __delay (1 -> * -> -> 15 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 119: }
-"119
-[e :UE 299 ]
+[; ;main.c: 134: }
+"134
+[e :UE 302 ]
 }
-"121
+"136
 [v _DelayXLCD `(v ~T0 @X0 1 ef ]
-"122
+"137
 {
-[; ;main.c: 121: void DelayXLCD(void)
-[; ;main.c: 122: {
+[; ;main.c: 136: void DelayXLCD(void)
+[; ;main.c: 137: {
 [e :U _DelayXLCD ]
 [f ]
-[; ;main.c: 123: _delay((unsigned long)((5)*(4000000/4000.0)));
-"123
+[; ;main.c: 138: _delay((unsigned long)((5)*(4000000/4000.0)));
+"138
 [e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 124: }
-"124
-[e :UE 300 ]
+[; ;main.c: 139: }
+"139
+[e :UE 303 ]
 }
-"129
+"144
 [v _init_XLCD `(v ~T0 @X0 1 ef ]
-"130
+"145
 {
-[; ;main.c: 129: void init_XLCD(void)
-[; ;main.c: 130: {
+[; ;main.c: 144: void init_XLCD(void)
+[; ;main.c: 145: {
 [e :U _init_XLCD ]
 [f ]
-[; ;main.c: 131: OpenXLCD(0b00101100&0b00111000);
-"131
+[; ;main.c: 146: OpenXLCD(0b00101100&0b00111000);
+"146
 [e ( _OpenXLCD (1 -> & -> 44 `i -> 56 `i `uc ]
-[; ;main.c: 133: while(BusyXLCD());
-"133
-[e $U 302  ]
-[e :U 303 ]
-[e :U 302 ]
-[e $ != -> ( _BusyXLCD ..  `i -> -> -> 0 `i `uc `i 303  ]
-[e :U 304 ]
-[; ;main.c: 135: WriteCmdXLCD(0x06);
-"135
+[; ;main.c: 148: while(BusyXLCD());
+"148
+[e $U 305  ]
+[e :U 306 ]
+[e :U 305 ]
+[e $ != -> ( _BusyXLCD ..  `i -> -> -> 0 `i `uc `i 306  ]
+[e :U 307 ]
+[; ;main.c: 150: WriteCmdXLCD(0x06);
+"150
 [e ( _WriteCmdXLCD (1 -> -> 6 `i `uc ]
-[; ;main.c: 136: WriteCmdXLCD(0x0C);
-"136
+[; ;main.c: 151: WriteCmdXLCD(0x0C);
+"151
 [e ( _WriteCmdXLCD (1 -> -> 12 `i `uc ]
-[; ;main.c: 137: }
-"137
-[e :UE 301 ]
+[; ;main.c: 152: }
+"152
+[e :UE 304 ]
 }
