@@ -1,6 +1,5 @@
 #include "Definitions.h"
 #include "xlcd.h"
-#include "adc.h"
 #include <stdio.h>
 
 void main(void) 
@@ -11,10 +10,8 @@ TRISD = 0;
 TRISDbits.RD0 = 1;
 TRISDbits.RD1 = 1;
 TRISDbits.RD2 = 1;
-int recorded = 0;
 
 init_XLCD();
-int startcount = 0;
 char order[2];
 int rd0end = 1;
 int rd1end = 1;

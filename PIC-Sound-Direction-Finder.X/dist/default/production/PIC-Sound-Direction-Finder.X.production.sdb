@@ -27,13 +27,13 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\pic18\d10ktcyx.c
 [v _Delay10KTCYx Delay10KTCYx `(v  1 e 1 0 ]
-"6 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\main.c
+"5 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"122
+"123
 [v _DelayFor18TCY DelayFor18TCY `(v  1 e 1 0 ]
-"127
+"128
 [v _DelayPORXLCD DelayPORXLCD `(v  1 e 1 0 ]
-"140
+"141
 [v _init_XLCD init_XLCD `(v  1 e 1 0 ]
 "19 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\openxlcd.c
 [v _OpenXLCD OpenXLCD `(v  1 e 1 0 ]
@@ -78,7 +78,7 @@
 [v _PORTDbits PORTDbits `VES94  1 e 1 @3971 ]
 "975
 [v _LATA LATA `VEuc  1 e 1 @3977 ]
-[s S185 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S183 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -88,7 +88,7 @@
 `uc 1 LATA7 1 0 :1:7 
 ]
 "1002
-[s S194 . 1 `uc 1 LA0 1 0 :1:0 
+[s S192 . 1 `uc 1 LA0 1 0 :1:0 
 `uc 1 LA1 1 0 :1:1 
 `uc 1 LA2 1 0 :1:2 
 `uc 1 LA3 1 0 :1:3 
@@ -97,11 +97,11 @@
 `uc 1 LA6 1 0 :1:6 
 `uc 1 LA7 1 0 :1:7 
 ]
-[u S203 . 1 `S185 1 . 1 0 `S194 1 . 1 0 ]
-[v _LATAbits LATAbits `VES203  1 e 1 @3977 ]
+[u S201 . 1 `S183 1 . 1 0 `S192 1 . 1 0 ]
+[v _LATAbits LATAbits `VES201  1 e 1 @3977 ]
 "1087
 [v _LATB LATB `VEuc  1 e 1 @3978 ]
-[s S239 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S237 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -111,7 +111,7 @@
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "1507
-[s S248 . 1 `uc 1 RA0 1 0 :1:0 
+[s S246 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -120,8 +120,8 @@
 `uc 1 RA6 1 0 :1:6 
 `uc 1 RA7 1 0 :1:7 
 ]
-[u S257 . 1 `S239 1 . 1 0 `S248 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES257  1 e 1 @3986 ]
+[u S255 . 1 `S237 1 . 1 0 `S246 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES255  1 e 1 @3986 ]
 "1697
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
 "2141
@@ -138,127 +138,24 @@
 "2173
 [u S42 . 1 `S24 1 . 1 0 `S33 1 . 1 0 ]
 [v _TRISDbits TRISDbits `VES42  1 e 1 @3989 ]
-[s S611 . 1 `uc 1 TMR1IE 1 0 :1:0 
-`uc 1 TMR2IE 1 0 :1:1 
-`uc 1 CCP1IE 1 0 :1:2 
-`uc 1 SSPIE 1 0 :1:3 
-`uc 1 TXIE 1 0 :1:4 
-`uc 1 RCIE 1 0 :1:5 
-`uc 1 ADIE 1 0 :1:6 
-`uc 1 PSPIE 1 0 :1:7 
-]
-"2614
-[s S620 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 TX1IE 1 0 :1:4 
-`uc 1 RC1IE 1 0 :1:5 
-]
-[u S624 . 1 `S611 1 . 1 0 `S620 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES624  1 e 1 @3997 ]
-[s S696 . 1 `uc 1 TMR1IF 1 0 :1:0 
-`uc 1 TMR2IF 1 0 :1:1 
-`uc 1 CCP1IF 1 0 :1:2 
-`uc 1 SSPIF 1 0 :1:3 
-`uc 1 TXIF 1 0 :1:4 
-`uc 1 RCIF 1 0 :1:5 
-`uc 1 ADIF 1 0 :1:6 
-`uc 1 PSPIF 1 0 :1:7 
-]
-"2691
-[s S705 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 TX1IF 1 0 :1:4 
-`uc 1 RC1IF 1 0 :1:5 
-]
-[u S709 . 1 `S696 1 . 1 0 `S705 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES709  1 e 1 @3998 ]
-"4617
-[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
-"4688
-[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
-"4773
-[v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
-[s S497 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 GO_NOT_DONE 1 0 :1:1 
-]
-"4817
-[s S500 . 1 `uc 1 ADON 1 0 :1:0 
-`uc 1 GO_nDONE 1 0 :1:1 
-`uc 1 CHS 1 0 :4:2 
-]
-[s S504 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 GO 1 0 :1:1 
-`uc 1 CHS0 1 0 :1:2 
-`uc 1 CHS1 1 0 :1:3 
-`uc 1 CHS2 1 0 :1:4 
-`uc 1 CHS3 1 0 :1:5 
-]
-[s S511 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 DONE 1 0 :1:1 
-]
-[s S514 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 NOT_DONE 1 0 :1:1 
-]
-[s S517 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 nDONE 1 0 :1:1 
-]
-[s S520 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 GO_DONE 1 0 :1:1 
-]
-[s S523 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 GODONE 1 0 :1:1 
-]
-[u S526 . 1 `S497 1 . 1 0 `S500 1 . 1 0 `S504 1 . 1 0 `S511 1 . 1 0 `S514 1 . 1 0 `S517 1 . 1 0 `S520 1 . 1 0 `S523 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES526  1 e 1 @4034 ]
-"4899
-[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
-"4906
-[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
-[s S743 . 1 `uc 1 RBIF 1 0 :1:0 
-`uc 1 INT0IF 1 0 :1:1 
-`uc 1 TMR0IF 1 0 :1:2 
-`uc 1 RBIE 1 0 :1:3 
-`uc 1 INT0IE 1 0 :1:4 
-`uc 1 TMR0IE 1 0 :1:5 
-`uc 1 PEIE_GIEL 1 0 :1:6 
-`uc 1 GIE_GIEH 1 0 :1:7 
-]
-"6722
-[s S752 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 INT0F 1 0 :1:1 
-`uc 1 T0IF 1 0 :1:2 
-`uc 1 . 1 0 :1:3 
-`uc 1 INT0E 1 0 :1:4 
-`uc 1 T0IE 1 0 :1:5 
-`uc 1 PEIE 1 0 :1:6 
-`uc 1 GIE 1 0 :1:7 
-]
-[s S761 . 1 `uc 1 . 1 0 :6:0 
-`uc 1 GIEL 1 0 :1:6 
-`uc 1 GIEH 1 0 :1:7 
-]
-[u S765 . 1 `S743 1 . 1 0 `S752 1 . 1 0 `S761 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES765  1 e 1 @4082 ]
-"6 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\main.c
+"5 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"24
-[v main@count count `ul  1 a 4 23 ]
-"23
-[v main@tempcounter tempcounter `ul  1 a 4 19 ]
-"18
-[v main@order order `[3]uc  1 a 3 27 ]
 "21
-[v main@rd2end rd2end `i  1 a 2 17 ]
+[v main@count count `ul  1 a 4 19 ]
 "20
-[v main@rd1end rd1end `i  1 a 2 15 ]
+[v main@tempcounter tempcounter `ul  1 a 4 13 ]
+"15
+[v main@order order `[2]uc  1 a 2 23 ]
 "19
-[v main@rd0end rd0end `i  1 a 2 13 ]
-"22
-[v main@duration duration `i  1 a 2 11 ]
+[v main@duration duration `i  1 a 2 17 ]
+"18
+[v main@rd2end rd2end `i  1 a 2 11 ]
 "17
-[v main@startcount startcount `i  1 a 2 9 ]
-"14
-[v main@recorded recorded `i  1 a 2 7 ]
-"120
+[v main@rd1end rd1end `i  1 a 2 9 ]
+"16
+[v main@rd0end rd0end `i  1 a 2 7 ]
+"121
 } 0
 "16 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\putrxlcd.c
 [v _putrsXLCD putrsXLCD `(v  1 e 1 0 ]
@@ -275,10 +172,10 @@
 [v WriteDataXLCD@data data `uc  1 a 1 0 ]
 "63
 } 0
-"140 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\main.c
+"141 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\main.c
 [v _init_XLCD init_XLCD `(v  1 e 1 0 ]
 {
-"148
+"149
 } 0
 "19 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\openxlcd.c
 [v _OpenXLCD OpenXLCD `(v  1 e 1 0 ]
@@ -307,10 +204,10 @@
 [v SetDDRamAddr@DDaddr DDaddr `uc  1 a 1 3 ]
 "60
 } 0
-"127 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\main.c
+"128 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\main.c
 [v _DelayPORXLCD DelayPORXLCD `(v  1 e 1 0 ]
 {
-"130
+"131
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\pic18\d10ktcyx.c
 [v _Delay10KTCYx Delay10KTCYx `(v  1 e 1 0 ]
@@ -325,8 +222,8 @@
 {
 "57
 } 0
-"122 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\main.c
+"123 D:\Systemnahe Programmierung\PIC-Sound-Direction-Finder\PIC-Sound-Direction-Finder.X\main.c
 [v _DelayFor18TCY DelayFor18TCY `(v  1 e 1 0 ]
 {
-"125
+"126
 } 0

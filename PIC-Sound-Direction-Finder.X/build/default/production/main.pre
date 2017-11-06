@@ -3921,33 +3921,6 @@ void DelayXLCD (void);
 
 #pragma config EBTRB = OFF
 
-# 2008 "adc.h"
-union ADCResult
-{
-int lr;
-char br[2];
-};
-
-char BusyADC (void);
-
-void ConvertADC (void);
-
-void CloseADC(void);
-
-# 2026
-int ReadADC(void);
-
-# 2040
-void OpenADC ( unsigned char ,
-unsigned char ,
-unsigned char );
-
-# 2084
-void SetChanADC(unsigned char );
-
-# 2100
-void SelChanConvADC( unsigned char );
-
 # 4 "C:\Program Files (x86)\Microchip\xc8\v1.44\include\__size_t.h"
 typedef unsigned size_t;
 
@@ -4011,7 +3984,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 
-# 6 "main.c"
+# 5 "main.c"
 void main(void)
 {
 LATA = 0xFF;
@@ -4020,11 +3993,9 @@ TRISD = 0;
 TRISDbits.RD0 = 1;
 TRISDbits.RD1 = 1;
 TRISDbits.RD2 = 1;
-int recorded = 0;
 
 init_XLCD();
-int startcount = 0;
-char order[3];
+char order[2];
 int rd0end = 1;
 int rd1end = 1;
 int rd2end = 1;
@@ -4038,7 +4009,6 @@ if(count == 100000) {
 init_XLCD();
 order[0] = (0);
 order[1] = (0);
-order[2] = (0);
 rd0end = 1;
 rd1end = 1;
 rd2end = 1;
@@ -4047,6 +4017,7 @@ count = 0;
 
 
 if(PORTDbits.RD0 == 1 && rd0end == 1) {
+
 rd0end = 0;
 if(order[0] == (0)) {
 order[0] = 'M';
@@ -4057,12 +4028,13 @@ order[1] = 'M';
 duration = count - tempcounter;
 }
 else {
-order[2] = 'M';
+if(duration > 0x000F) {
+order[1] = (0);
+}
 init_XLCD();
 putrsXLCD(order);
 order[0] = (0);
 order[1] = (0);
-order[2] = (0);
 rd0end = 1;
 rd1end = 1;
 rd2end = 1;
@@ -4083,12 +4055,13 @@ order[1] = 'L';
 duration = count - tempcounter;
 }
 else {
-order[2] = 'L';
+if(duration > 0x000F) {
+order[1] = (0);
+}
 init_XLCD();
 putrsXLCD(order);
 order[0] = (0);
 order[1] = (0);
-order[2] = (0);
 rd0end = 1;
 rd1end = 1;
 rd2end = 1;
@@ -4109,7 +4082,9 @@ order[1] = 'R';
 duration = count - tempcounter;
 }
 else {
-order[2] = 'R';
+if(duration > 0x000F) {
+order[1] = (0);
+}
 init_XLCD();
 putrsXLCD(order);
 order[0] = (0);
