@@ -2,6 +2,12 @@
 #include "xlcd.h"
 #include <stdio.h>
 
+char order[2];
+int rd0start = 1;
+int rd1start = 1;
+int rd2start = 1;
+int duration;
+
 void main(void) 
 {
 LATA = 0xFF;
@@ -12,30 +18,24 @@ TRISDbits.RD1 = 1;
 TRISDbits.RD2 = 1;
 
 init_XLCD();
-char order[2];
-int rd0end = 1;
-int rd1end = 1;
-int rd2end = 1;
-int duration;
+
+
 unsigned long tempcounter = 0;
 unsigned long count = 0;
+
 while(1) {
     ++count;
     if(count == 100000) {
-        
         init_XLCD();
-        order[0] = NULL;
-        order[1] = NULL;
-        rd0end = 1;
-        rd1end = 1;
-        rd2end = 1;
+        reset();
         count = 0;
+        
     }
     
     
-    if(PORTDbits.RD0 == 1 && rd0end == 1) {
+    if(PORTDbits.RD0 == 1 && rd0start == 1) {
         
-        rd0end = 0;
+        rd0start = 0;
         if(order[0] == NULL) {
             order[0] = 'M';
             tempcounter = count;
@@ -50,19 +50,14 @@ while(1) {
             }
             init_XLCD();
             putrsXLCD(order);
-            order[0] = NULL;
-            order[1] = NULL;
-            rd0end = 1;
-            rd1end = 1;
-            rd2end = 1;
-            duration = 0;
+            reset();
             __delay_ms(2000);
             
         }    
     }
     
-    if(PORTDbits.RD1 == 1 && rd1end == 1) {
-        rd1end = 0;
+    if(PORTDbits.RD1 == 1 && rd1start == 1) {
+        rd1start = 0;
         if(order[0] == NULL) {
             order[0] = 'L';
             tempcounter = count;
@@ -77,19 +72,14 @@ while(1) {
             }
             init_XLCD();
             putrsXLCD(order);
-            order[0] = NULL;
-            order[1] = NULL;
-            rd0end = 1;
-            rd1end = 1;
-            rd2end = 1;
-            duration = 0;
+            reset();
             __delay_ms(2000);
             
         } 
     }
     
-    if(PORTDbits.RD2 == 1 && rd2end == 1) {
-        rd2end = 0;
+    if(PORTDbits.RD2 == 1 && rd2start == 1) {
+        rd2start = 0;
         if(order[0] == NULL) {
             order[0] = 'R';
             tempcounter = count;
@@ -104,13 +94,7 @@ while(1) {
             }
             init_XLCD();
             putrsXLCD(order);
-            order[0] = NULL;
-            order[1] = NULL;
-            order[2] = NULL;
-            rd0end = 1;
-            rd1end = 1;
-            rd2end = 1;
-            duration = 0;
+            reset();
             __delay_ms(2000);
             
         } 
@@ -118,6 +102,17 @@ while(1) {
 }  
 
 return;
+}
+
+int reset(void)
+{
+        order[0] = NULL;
+        order[1] = NULL;
+        rd0start = 1;
+        rd1start = 1;
+        rd2start = 1;
+        duration = 0;
+        return 0;
 }
 
 void DelayFor18TCY( void ) //18+ cycles delay
